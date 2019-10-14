@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Panier,fr.ufrsciencestech.panier,Panier,116,52,13,3,26,14,15,5,8,4
+Panier,fr.ufrsciencestech.panier,IHM,262,0,8,0,60,0,10,0,6,0
+Panier,fr.ufrsciencestech.panier,IHM.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
+Panier,fr.ufrsciencestech.panier,VueGAWT,108,0,0,0,27,0,7,0,7,0
+Panier,fr.ufrsciencestech.panier,Cerise,50,0,2,0,13,0,7,0,6,0
+Panier,fr.ufrsciencestech.panier,Controlleur,85,0,6,0,21,0,7,0,4,0
+Panier,fr.ufrsciencestech.panier,VueGraphique,112,0,0,0,28,0,7,0,7,0
+Panier,fr.ufrsciencestech.panier,Banane,50,0,2,0,13,0,7,0,6,0
+Panier,fr.ufrsciencestech.panier,VueGAWT.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
+Panier,fr.ufrsciencestech.panier,Orange,22,28,1,1,2,11,2,5,1,5

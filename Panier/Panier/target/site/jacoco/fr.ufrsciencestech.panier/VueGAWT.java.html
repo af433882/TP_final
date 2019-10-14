@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VueGAWT.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Panier</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.panier</a> &gt; <span class="el_source">VueGAWT.java</span></div><h1>VueGAWT.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fr.ufrsciencestech.panier;
+
+import java.awt.*;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Observable;
+import java.util.Observer;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+/**
+ *
+ * @author af433882
+ */
+public class VueGAWT extends java.awt.Frame implements Observer{
+    private Button dec;
+    private Button inc;
+    private Label affiche;
+
+    public Button getDec() {
+<span class="nc" id="L29">        return dec;</span>
+    }
+
+    public Button getInc() {
+<span class="nc" id="L33">        return inc;</span>
+    }
+
+    public Label getAffiche() {
+<span class="nc" id="L37">        return affiche;</span>
+    }
+
+    public void setAffiche(Label affiche) {
+<span class="nc" id="L41">        this.affiche = affiche;</span>
+<span class="nc" id="L42">    }</span>
+    
+    
+<span class="nc" id="L45">    public VueGAWT(){</span>
+<span class="nc" id="L46">        this.inc = new Button(&quot;+&quot;);</span>
+<span class="nc" id="L47">        this.inc.setName(&quot;Plus&quot;);</span>
+<span class="nc" id="L48">        this.dec = new Button(&quot;-&quot;);</span>
+<span class="nc" id="L49">        this.dec.setName(&quot;Moins&quot;);</span>
+<span class="nc" id="L50">        this.affiche = new Label(&quot;non initialiser&quot;);</span>
+<span class="nc" id="L51">        this.setTitle(&quot;Panier&quot;);</span>
+<span class="nc" id="L52">        this.setSize(300, 300);</span>
+<span class="nc" id="L53">        this.setLocationRelativeTo(null);</span>
+<span class="nc" id="L54">        this.setLayout(new GridLayout(3,1));</span>
+<span class="nc" id="L55">        this.add(this.inc);</span>
+<span class="nc" id="L56">        this.add(this.affiche);</span>
+<span class="nc" id="L57">        this.add(this.dec);</span>
+<span class="nc" id="L58">        this.addWindowListener(new WindowAdapter(){</span>
+            public void windowClosing(WindowEvent e){
+<span class="nc" id="L60">                System.exit(0);</span>
+<span class="nc" id="L61">            }</span>
+        });
+<span class="nc" id="L63">        this.pack();</span>
+<span class="nc" id="L64">        this.setVisible(true);</span>
+<span class="nc" id="L65">    }   </span>
+
+    @Override
+    public void update(Observable o, Object arg) {
+<span class="nc" id="L69">        this.affiche.setText(&quot;&quot;+((Panier)o).getCountMax());</span>
+<span class="nc" id="L70">    }</span>
+    public void ajoutControlleur(Controlleur c){
+<span class="nc" id="L72">        this.getInc().addActionListener(c);</span>
+<span class="nc" id="L73">        this.getDec().addActionListener(c);</span>
+<span class="nc" id="L74">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

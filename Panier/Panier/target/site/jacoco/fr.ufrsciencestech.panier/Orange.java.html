@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Orange.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Panier</a> &gt; <a href="index.source.html" class="el_package">fr.ufrsciencestech.panier</a> &gt; <span class="el_source">Orange.java</span></div><h1>Orange.java</h1><pre class="source lang-java linenums">package fr.ufrsciencestech.panier;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Orange implements Fruit
+{
+
+    private double prix;
+    private String origine;
+
+    public Orange(double p, String o) throws Exception	
+<span class="fc" id="L13">        {	</span>
+<span class="fc" id="L14">		this.prix=p;</span>
+<span class="fc" id="L15">		this.origine=o;</span>
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">                if(prix&lt;0)</span>
+<span class="nc" id="L17">                    throw new Exception(&quot;prix invalide&quot;);</span>
+<span class="fc" id="L18">	}</span>
+        
+    public double getPrix()
+	{
+<span class="fc" id="L22">		return this.prix;</span>
+	}
+
+    public String getOrigine()
+	{
+<span class="fc" id="L27">		return this.origine;</span>
+	}
+
+    public void setPrix(double prix) {
+<span class="fc" id="L31">        this.prix = prix;</span>
+<span class="fc" id="L32">    }</span>
+
+    public void setOrigine(String origine) {
+<span class="fc" id="L35">        this.origine = origine;</span>
+<span class="fc" id="L36">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L40">        return &quot;Orange{&quot; + &quot;prix=&quot; + prix + &quot;$, origine=&quot; + origine + '}';</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
